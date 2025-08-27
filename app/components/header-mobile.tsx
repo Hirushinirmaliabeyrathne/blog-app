@@ -128,7 +128,7 @@ export default function HeaderMobile({ navigationItems, pathname }: HeaderMobile
                            before:content-[''] before:absolute before:block before:w-1/2 before:h-full 
                            before:bg-white/50 before:blur-0 before:transition-all before:duration-400 
                            before:skew-x-45 before:translate-x-[150%] hover:before:-translate-x-[150%]">
-            <span className="opacity-80 relative z-10">GET STARTED</span>
+            <span className="opacity-80 relative z-10"> SUBSCRIBE </span>
            
           </button>
         </div>

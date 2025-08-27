@@ -4,8 +4,6 @@
 
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
-import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
 import HeaderDesktop from "./header-desktop"
 import HeaderMobile from "./header-mobile"
@@ -57,22 +55,12 @@ export default function Header() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex justify-between items-center h-[60px] xs:h-[65px] sm:h-[80px] w-full">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold flex-shrink-0">
-            <div className="relative group">
-              <Image
-                src="/placeholder.svg?height=79&width=161"
-                alt="Logo"
-                width={161}
-                height={79}
-                className={`transition-all duration-300 ${
-                  isScrolled 
-                    ? 'xs:w-[60px] w-[70px] h-[60px] md:w-[90px] lg:w-[100px]'
-                    : 'xs:w-[80px] w-[90px] h-[80px] md:w-[120px] lg:w-[140px]'
-                }`}
-                priority
-              />
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">B</span>
             </div>
-          </Link>
+            <span className="text-white font-bold text-xl">Blog</span>
+          </div>
 
           {/* Conditional Rendering based on screen size */}
           {isMobile ? (

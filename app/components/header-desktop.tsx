@@ -68,7 +68,7 @@ export default function HeaderDesktop({ navigationItems, pathname }: HeaderDeskt
                        before:bg-white/50 before:blur-0 before:transition-all before:duration-400 
                        before:skew-x-45 before:translate-x-[150%] hover:before:-translate-x-[150%]"
       >
-        <span className="whitespace-nowrap opacity-80 relative z-10">GET STARTED</span>
+        <span className="whitespace-nowrap opacity-80 relative z-10"> SUBSCRIBE </span>
       </button>
     </>
   )
