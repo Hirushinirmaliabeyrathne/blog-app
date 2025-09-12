@@ -65,7 +65,7 @@ export default function Technology() {
                     className="transform translate-y-10 transition-all duration-500 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
                     style={{ transitionDelay: '0.2s' }}
                   >
-                    <Link
+                  <Link
                       href={`/article/${article.id}`}
                       className="text-white hover:text-[#8133F1] transition-colors duration-300 flex items-center gap-1 text-xs bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm border border-white/20 hover:bg-[#8133F1]/20"
                     >

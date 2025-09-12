@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react"
 
-import Travel from "./components/Travel"
-import LifeStyle from "./components/Lifestyle"
 import FoodPage from "./components/Food"
 import Header from "./components/header"
 import Technology from "./components/technology/page"
 import ContactPage from "./contact/page"
+import Travel from "./components/travel/page"
+import LifeStyle from "./components/Lifestyle/page"
 
 // Seeded random function for consistent hydration
 function seededRandom(seed: number) {
@@ -161,8 +161,8 @@ export default function Home() {
       
       <div className="relative z-10">
         <Technology/>
-        <Travel />
-        <LifeStyle />
+        <Travel/>
+        <LifeStyle/>
         <FoodPage />
         <ContactPage/>
       </div>

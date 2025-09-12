@@ -1,66 +1,13 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { ChevronRight, MapPin } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight, MapPin } from "lucide-react";
+import { travelDestinations } from "../../../data/travelDestinations"; // Assuming you have this file path
 
-// Mock data for demonstration
-const travelDestinations = [
-  {
-    id: 1,
-    title: "Santorini Paradise",
-    location: "Santorini, Greece",
-
-    price: "$299",
-    image: "/images/beach.jpg",
-    description: "Experience the magical sunsets and white-washed buildings",
-  },
-  {
-    id: 2,
-    title: "Tokyo Adventure",
-    location: "Tokyo, Japan",
-
-    price: "$599",
-    image: "/images/tokiyoresturent.jpg",
-    description: "Discover the perfect blend of tradition and modernity",
-  },
-  {
-    id: 3,
-    title: "Swiss Alps Escape",
-    location: "Zermatt, Switzerland",
-
-    price: "$799",
-    image: "/images/swissalps.jpg",
-    description: "Breathtaking mountain views and pristine alpine air",
-  },
-  {
-    id: 4,
-    title: "Bali Retreat",
-    location: "Ubud, Bali",
-
-    price: "$399",
-    image: "/images/baliretreat.jpg",
-    description: "Tropical paradise with rich culture and stunning nature",
-  },
-  {
-    id: 5,
-    title: "Dubai Luxury",
-    location: "Dubai, UAE",
-
-    price: "$899",
-    image: "/images/dubai.jpg",
-    description: "Experience luxury and innovation in the desert metropolis",
-  },
-  {
-    id: 6,
-    title: "Iceland Wonder",
-    location: "Reykjavik, Iceland",
-
-    price: "$699",
-    image: "/images/iceland.jpg",
-    description: "Witness the Northern Lights and dramatic landscapes",
-  },
-]
+// The interface and data should be in a separate file, e.g., src/data/travelDestinations.ts
+// export interface TravelDestination { ... }
+// export const travelDestinations: TravelDestination[] = [ ... ];
 
 export default function Travel() {
   return (
@@ -79,7 +26,6 @@ export default function Travel() {
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-4">
               Travel
             </h2>
-
           </div>
           <Link
             href="/categories/travel"
@@ -112,10 +58,8 @@ export default function Travel() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-
                   {/* 3D Floating Icon */}
                   <div className="absolute bottom-4 right-4 w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-500">
                     <MapPin className="w-6 h-6 text-white" />
@@ -133,19 +77,16 @@ export default function Travel() {
                       {destination.location}
                     </p>
                   </div>
-
                   <p className="text-gray-400 text-sm leading-relaxed">{destination.description}</p>
-
-                  {/* Action Button */}
+                  {/* Action Button: Corrected href here */}
                   <Link
-                    href={`/destination/${destination.id}`}
+                    href={`/${destination.category.toLowerCase()}/${destination.id}`}
                     className="group/btn w-full flex items-center justify-center gap-2 bg-gradient-to-r from-black via-gray-800 to-black hover:from-gray-900 hover:via-gray-700 hover:to-gray-900 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-gray-500/30 hover:scale-105 mt-6"
                   >
                     Read More
                     <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
-
                 {/* 3D Border Effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               </div>
@@ -161,7 +102,6 @@ export default function Travel() {
         .perspective-1000 {
           perspective: 1000px;
         }
-        
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -174,5 +114,5 @@ export default function Travel() {
         }
       `}</style>
     </section>
-  )
+  );
 }
