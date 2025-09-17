@@ -1,10 +1,11 @@
 export interface Recipe {
-  id: number;
-  title: string;
-  time: string;
-  difficulty: "Easy" | "Medium" | "Hard";
-  image: string;
-  description?: string;
+    id: number;
+    title: string;
+    time: string;
+    difficulty: "Easy" | "Medium" | "Hard";
+    image: string;
+    description?: string;
+    fullRecipe?: string; 
 }
 
 export const recipes: Recipe[] = [
@@ -14,7 +15,8 @@ export const recipes: Recipe[] = [
     time: "30 min",
     difficulty: "Easy",
     image: "/images/food01.jpg",
-    description: "Rich and creamy pasta with sun-dried tomatoes and spinach"
+    description: "Rich and creamy pasta with sun-dried tomatoes and spinach",
+     fullRecipe: "Here is the detailed step-by-step recipe for Creamy Tuscan Chicken Pasta, including a list of ingredients and cooking instructions...", // Add this line
   },
   {
     id: 2,
@@ -22,7 +24,8 @@ export const recipes: Recipe[] = [
     time: "25 min",
     difficulty: "Medium",
     image: "/images/food02.jpg",
-    description: "Aromatic stir fry with fresh basil and bold Thai flavors"
+    description: "Aromatic stir fry with fresh basil and bold Thai flavors",
+ fullRecipe: "Here is the detailed step-by-step recipe for Creamy Tuscan Chicken Pasta, including a list of ingredients and cooking instructions...", // Add this line
   },
   {
     id: 3,
@@ -30,7 +33,8 @@ export const recipes: Recipe[] = [
     time: "45 min",
     difficulty: "Medium",
     image: "/images/food03.jpg",
-    description: "Traditional Provençal vegetable stew with herbs"
+    description: "Traditional Provençal vegetable stew with herbs",
+ fullRecipe: "Here is the detailed step-by-step recipe for Creamy Tuscan Chicken Pasta, including a list of ingredients and cooking instructions...", // Add this line
   },
   {
     id: 4,
@@ -38,7 +42,8 @@ export const recipes: Recipe[] = [
     time: "20 min",
     difficulty: "Easy",
     image: "/images/food04.jpg",
-    description: "Fresh and zesty corn salad with lime and cotija cheese"
+    description: "Fresh and zesty corn salad with lime and cotija cheese",
+ fullRecipe: "Here is the detailed step-by-step recipe for Creamy Tuscan Chicken Pasta, including a list of ingredients and cooking instructions...", // Add this line
   },
   {
     id: 5,
@@ -46,7 +51,8 @@ export const recipes: Recipe[] = [
     time: "3 hours",
     difficulty: "Hard",
     image: "/images/food05.jpg",
-    description: "Artisanal sourdough with perfect crust and tangy flavor"
+    description: "Artisanal sourdough with perfect crust and tangy flavor",
+ fullRecipe: "Here is the detailed step-by-step recipe for Creamy Tuscan Chicken Pasta, including a list of ingredients and cooking instructions...", // Add this line
   },
   {
     id: 6,
@@ -54,6 +60,7 @@ export const recipes: Recipe[] = [
     time: "25 min",
     difficulty: "Easy",
     image: "/images/food06.jpg",
-    description: "Nutritious bowl with quinoa, vegetables, and tahini dressing"
+    description: "Nutritious bowl with quinoa, vegetables, and tahini dressing",
+     fullRecipe: "Here is the detailed step-by-step recipe for Creamy Tuscan Chicken Pasta, including a list of ingredients and cooking instructions...", // Add this line
   },
 ];

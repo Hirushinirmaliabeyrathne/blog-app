@@ -74,7 +74,7 @@ export default function LifeStyle() {
 
                   {/* Action Link */}
                   <Link
-                    href={`/article/${article.id}`}
+                   href={`/lifestyle/${article.id}`} 
                     className="group/link inline-flex items-center gap-2 text-white hover:text-gray-200 font-medium transition-all duration-300 bg-gradient-to-r from-gray-800/50 to-gray-700/50 hover:from-gray-700/60 hover:to-gray-600/60 px-4 py-2 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 w-fit"
                   >
                     Read More
